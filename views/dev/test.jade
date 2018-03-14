@@ -1,0 +1,22 @@
+extends ../layout
+
+block content
+	div(class='container-fluid')
+		div(class='jumbotron well')
+			h1= title
+			p Welcome to #{title}
+
+			div(id='app')
+				p {{message}}
+
+
+	script.
+		var a = 1;
+		console.log(a+1);
+
+		var app = new Vue({
+			el: '#app',
+			data: {
+				message: 'Integrate jade and Vue.js',
+			},
+		});
